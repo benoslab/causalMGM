@@ -1,10 +1,10 @@
 # Returns the directed graph
-pc_stable <- function(graph){
+pc_stable <- function(ds, graph){
 
-  IndTestDSep <- J("edu/cmu/tetrad/search/IndTestDSep")
+  IndTest <- J("edu/pitt/csb/mgm/IndTestMultinomialLogisticRegressionWald")
   PcStable <- J("edu/cmu/tetrad/search/PcStable")
 
-  indt <- new(IndTestDSep, graph)
+  indt <- new(IndTest, ds, 0.2, FALSE)
   pcs <- new(PcStable, indt)
 
   .jcall(pcs, "V", "setInitialGraph", graph)

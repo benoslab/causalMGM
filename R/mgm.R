@@ -4,18 +4,7 @@
 #   Test Package:              'Cmd + Shift + T'
 
 # Returns the undirected graph
-mgm <- function() {
-
-  # Create MixedUtils object
-  MixedUtils <- J("edu/pitt/csb/mgm/MixedUtils")
-  mu <- new(MixedUtils)
-
-  # Prompt user for dataset
-  fileName <- readline(prompt="Please enter the name of your dataset file: ")
-  fileDir <- readline(prompt="Please enter the directory of your dataset file: ")
-
-  # Create DataSet object from file
-  ds <- .jcall(mu, "Ledu/cmu/tetrad/data/DataSet;", "loadDataSet", fileDir, fileName)
+mgm <- function(ds) {
 
   # Prompt user for lambda values
   cc <- get_lambda("continuous-continuous")
