@@ -3,6 +3,7 @@
 #   Check Package:             'Cmd + Shift + E'
 #   Test Package:              'Cmd + Shift + T'
 
+# Returns the undirected graph
 mgm <- function() {
 
   # Load rJava library
@@ -25,9 +26,9 @@ mgm <- function() {
   ds <- .jcall(mu, "Ledu/cmu/tetrad/data/DataSet;", "loadDataSet", fileDir, fileName)
 
   # Prompt user for lambda values
-  cc <- as.numeric(readline(prompt="Please enter the continuous-continuous lambda value: "))
-  cd <- as.numeric(readline(prompt="Please enter the continuous-discrete lambda value: "))
-  dd <- as.numeric(readline(prompt="Please enter the discrete-discrete lambda value: "))
+  cc <- get_lambda("continuous-continuous")
+  cd <- get_lambda("continuous-discrete")
+  dd <- get_lambda("discrete-discrete")
 
   # Create Java array of lambda values
   lb <- c(cc, cd, dd)
@@ -51,5 +52,28 @@ mgm <- function() {
 
   end_message <- paste("The output has been saved to", output_filename)
   print(end_message)
+
+  return(mgm_graph)
+}
+
+# Prompt user for lambda value
+get_lambda <- function(lambda_type){
+  prompt <- paste("Please enter the", lambda_type, "lambda value: ")
+  lambda_val <- as.numeric(readline(prompt))
+  if(!check_lambda(lambda_val)){
+    get_lambda(lambda_type)
+  } else {
+    return(lambda_val)
+  }
+}
+
+# Check lambda value is valid
+check_lambda <- function(lambda_val){
+  if(lambda_val < 0 || lambda_val > 1){
+    print("Error: lambda values must be between 0 and 1")
+    return(FALSE)
+  } else {
+    return(TRUE)
+  }
 }
 
