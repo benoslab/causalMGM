@@ -6,14 +6,6 @@
 # Returns the undirected graph
 mgm <- function() {
 
-  # Load rJava library
-  library(rJava)
-  # Initalize JVM
-  .jinit()
-
-  # Add tetrad jar
-  .jaddClassPath("jars/tetrad.jar")
-
   # Create MixedUtils object
   MixedUtils <- J("edu/pitt/csb/mgm/MixedUtils")
   mu <- new(MixedUtils)
@@ -43,9 +35,9 @@ mgm <- function() {
   mgm_output <- .jcall(mgm_graph, "Ljava/lang/String;", "toString")
 
   # Generate random number
-  rn <- sample(100000:999999, 1)
+  rn <<- sample(100000:999999, 1)
 
-  output_filename <- paste("tmp/causalMGM_",rn,".txt", sep="")
+  output_filename <- paste("tmp/causalMGM_undirectedgraph_",rn,".txt", sep="")
 
   # Write string to output file
   lapply(strsplit(mgm_output[1], "\n"), write, output_filename)
