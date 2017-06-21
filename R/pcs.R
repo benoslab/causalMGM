@@ -4,7 +4,10 @@ pc_stable <- function(ds, graph){
   IndTest <- J("edu/pitt/csb/mgm/IndTestMultinomialLogisticRegressionWald")
   PcStable <- J("edu/cmu/tetrad/search/PcStable")
 
-  indt <- new(IndTest, ds, 0.2, FALSE)
+  alpha <- 0.2
+  preferLinear <- FALSE
+
+  indt <- new(IndTest, ds, alpha, preferLinear)
   pcs <- new(PcStable, indt)
 
   .jcall(pcs, "V", "setInitialGraph", graph)

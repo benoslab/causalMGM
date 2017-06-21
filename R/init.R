@@ -1,5 +1,5 @@
 # Load rJava and jars, initialize JVM
-init <- function(){
+mgm_init <- function(){
 
   # Load rJava library
   library(rJava)
