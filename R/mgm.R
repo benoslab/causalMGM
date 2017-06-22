@@ -1,8 +1,3 @@
-#
-#   Build and Reload Package:  'Cmd + Shift + B'
-#   Check Package:             'Cmd + Shift + E'
-#   Test Package:              'Cmd + Shift + T'
-
 # Returns the undirected graph
 mgm <- function(ds) {
 
