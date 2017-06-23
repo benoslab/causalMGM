@@ -2,7 +2,7 @@
 mgm_init <- function(){
 
   # Load rJava library
-  library(rJava)
+  #library(rJava)
   # Initalize JVM
   .jinit()
 
