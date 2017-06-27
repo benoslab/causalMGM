@@ -1,13 +1,12 @@
 # Returns the directed graph
 pc_stable <- function(ds, graph){
 
-  IndTest <- J("edu/pitt/csb/mgm/IndTestMultinomialLogisticRegressionWald")
+  IndTest <- J("edu/pitt/csb/mgm/IndTestMultinomialAJ")
   PcStable <- J("edu/cmu/tetrad/search/PcStable")
 
   alpha <- 0.2
-  preferLinear <- FALSE
 
-  indt <- new(IndTest, ds, alpha, preferLinear)
+  indt <- new(IndTest, ds, alpha)
   pcs <- new(PcStable, indt)
 
   .jcall(pcs, "V", "setInitialGraph", graph)
