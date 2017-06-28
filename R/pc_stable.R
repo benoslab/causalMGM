@@ -1,5 +1,5 @@
 # Returns the directed graph
-pc_stable <- function(ds, graph){
+mgm.pc_stable <- function(ds, graph){
 
   IndTest <- J("edu/pitt/csb/mgm/IndTestMultinomialAJ")
   PcStable <- J("edu/cmu/tetrad/search/PcStable")
@@ -15,7 +15,7 @@ pc_stable <- function(ds, graph){
 
   pcs_output <- .jcall(pcs_graph, "Ljava/lang/String;", "toString")
 
-  output_filename <- paste("tmp/causalMGM_directedgraph_",rn,".txt", sep="")
+  output_filename <- paste(" causalMGM_directedgraph_",rn,".txt", sep="")
 
   # Write string to output file
   lapply(strsplit(pcs_output[1], "\n"), write, output_filename)

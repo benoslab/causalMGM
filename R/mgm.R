@@ -43,7 +43,7 @@ mgm <- function(ds) {
   # Generate random number
   rn <<- sample(100000:999999, 1)
 
-  output_filename <- paste("tmp/causalMGM_undirectedgraph_",rn,".txt", sep="")
+  output_filename <- paste("causalMGM_undirectedgraph_",rn,".txt", sep="")
 
   # Write string to output file
   lapply(strsplit(mgm_output[1], "\n"), write, output_filename)

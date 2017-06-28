@@ -1,12 +1,12 @@
-\name{pc_stable}
-\alias{pc_stable}
+\name{mgm.pc_stable}
+\alias{mgm.pc_stable}
 \title{
 PC Stable}
 \description{
 Implements the Peter/Clark algorithm and returns the directed graph. Also outputs the graph to a .txt file
 }
 \usage{
-pc_stable(ds, graph)
+mgm.pc_stable(ds, graph)
 }
 \arguments{
   \item{ds}{
@@ -29,5 +29,5 @@ Neha Abraham
 mgm_init()
 ds <- loadData()
 graph <- mgm(ds)
-pc_stable(ds, graph)
+mgm.pc_stable(ds, graph)
 }
