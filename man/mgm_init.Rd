@@ -1,14 +1,11 @@
 \name{mgm_init}
 \alias{mgm_init}
 \title{Initialize causalMGM}
-\description{Loads the rJava library, jars, and initializes the JVM}
+\description{Loads the rJava library, tetradLite.jar, and initializes the JVM}
 \usage{
 mgm_init()
 }
 \arguments{}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
 \value{
 Does not return any value
 }

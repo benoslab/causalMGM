@@ -4,9 +4,9 @@ Title: Causal Learning of Mixed Graphical Models
 Version: 0.1.0
 Author: Andrew J Sedgewick, Neha Abraham <neha.abraham@pitt.edu>, Vineet Raghu <vineetraghu@gmail.com>, Panagiotis Benos <benos@pitt.edu>
 Maintainer: Neha Abraham <neha.abraham@pitt.edu>
-Description: An R wrapper for MGM
+Description: An R wrapper for MGM. MGM source is pulled from Tetrad version 6.4.0. Tetrad source can be found at: https://github.com/cmu-phil/tetrad
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.4.0), rJava
-SystemRequirements: Java (>= 1.8), JRI
+SystemRequirements: Java (>= 1.7), JRI
