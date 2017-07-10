@@ -8,5 +8,5 @@ Description: An R wrapper for MGM
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
-Depends: rJava
+Depends: R (>= 3.4.0), rJava
 SystemRequirements: Java (>= 1.8), JRI

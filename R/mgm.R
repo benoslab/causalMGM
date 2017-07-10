@@ -48,7 +48,8 @@ mgm <- function(ds) {
   # Write string to output file
   lapply(strsplit(mgm_output[1], "\n"), write, output_filename)
 
-  end_message <- paste("The output has been saved to", output_filename)
+  outputfile_path <- paste(getwd(), output_filename, sep="/")
+  end_message <- paste("The output has been saved to", outputfile_path)
   print(end_message)
 
   return(mgm_graph)

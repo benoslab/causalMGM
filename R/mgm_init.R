@@ -6,8 +6,15 @@ mgm_init <- function(){
   # Initalize JVM
   .jinit()
 
+  os <<- .Platform$OS.type
+
+  if(identical("windows", .Platform$OS.type)){
+    jarPath <- paste(.libPaths()[1], "\\causalMGM\\java\\tetradLite.jar", sep="")
+  } else{
+    jarPath <- paste(.libPaths()[1], "/causalMGM/java/tetradLite.jar", sep="")
+  }
+
   # Add tetrad jar
-  jarPath <- paste(.libPaths()[1], "/causalMGM/java/tetrad.jar", sep="")
   .jaddClassPath(jarPath)
 
   javaPaths <- .jclassPath()
