@@ -1,9 +1,9 @@
 \name{mgm.pc_stable}
 \alias{mgm.pc_stable}
 \title{
-PC Stable}
+MGM PC Stable}
 \description{
-Implements the Peter/Clark algorithm and returns the directed graph. Also outputs the graph to a .txt file
+Implements the PC-stable search algorithm () algorithm and returns the directed graph. Also outputs the graph to a .txt file
 }
 \usage{
 mgm.pc_stable(ds, graph)
@@ -20,10 +20,10 @@ mgm.pc_stable(ds, graph)
   \item{pcs_graph}{Directed graph}
 }
 \references{
-%% ~put references to the literature/web site here ~
+https://arxiv.org/abs/1704.02621
 }
 \author{
-Neha Abraham
+AJ Sedgewick, Neha Abraham, Panagiotis Benos
 }
 \examples{
 mgm_init()

@@ -5,12 +5,10 @@
 \usage{
 mgm_init()
 }
-\arguments{}
-\value{
-Does not return any value
-}
 \references{
-%% ~put references to the literature/web site here ~
+https://arxiv.org/abs/1704.02621
+https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-016-1039-0
+
 }
 \author{
 Neha Abraham
@@ -18,7 +16,6 @@ Neha Abraham
 \note{
 Must be the first function called after loading the causalMGM library
 }
-
 \examples{
 mgm_init()
 }

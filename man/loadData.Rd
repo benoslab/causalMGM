@@ -13,7 +13,7 @@ loadData()
 \item{ds}{DataSet object}
 }
 \author{
-Neha Abraham
+Neha Abraham, Panagiotis Benos
 }
 \note{
 Should be called after mgm_init()
