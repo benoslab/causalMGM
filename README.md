@@ -20,7 +20,6 @@ dyn.load('/path/to/libjvm.dylib')
 install.packages("rJava")
 ```
 - Install causalMGM from github:
-
 ```R
 library(devtools)
 install_github("nehaabraham/causalMGM")
@@ -32,7 +31,6 @@ install_github("nehaabraham/causalMGM")
 install.packages("rJava")
 ```
 - Install causalMGM from github:
-
 ```R
 library(devtools)
 install_github("nehaabraham/causalMGM")

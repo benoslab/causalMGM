@@ -4,7 +4,7 @@ mgm.pc_stable <- function(ds, graph){
   IndTest <- J("edu/pitt/csb/mgm/IndTestMultinomialAJ")
   PcStable <- J("edu/cmu/tetrad/search/PcStable")
 
-  alpha <- 0.2
+  alpha <- 0.05
 
   indt <- new(IndTest, ds, alpha)
   pcs <- new(PcStable, indt)
