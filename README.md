@@ -26,6 +26,18 @@ library(devtools)
 install_github("nehaabraham/causalMGM")
 ```
 
+# Installation for non-Mac OS Users
+- Install the R library requirements:
+```R
+install.packages("rJava")
+```
+- Install causalMGM from github:
+
+```R
+library(devtools)
+install_github("nehaabraham/causalMGM")
+```
+
 ## Example
 ```R
 library(causalMGM)
