@@ -50,6 +50,5 @@ Please enter the discrete-discrete lambda value: 0.3
 > mgm.pc_stable(dataset, graph) # Create the directed graph
 ```
 
-
 ## Contact
 Please contact <mgmquery@pitt.edu> with any questions.

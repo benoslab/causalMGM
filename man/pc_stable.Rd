@@ -11,7 +11,7 @@ mgm.pc_stable(ds, graph)
 \arguments{
   \item{ds}{
     DataSet object
-}
+  }
   \item{graph}{
     Graph object of DataSet
   }

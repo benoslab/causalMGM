@@ -35,7 +35,17 @@ mgm.pc_stable <- function(ds, graph){
   response <- readline(prompt="The default alpha value is 0.1. To change this alpha value, enter 'y': ")
   check_alpha_change(response)
 
-  indt <- new(IndTest, ds, alpha)
+  preferLinear <- TRUE
+
+  linear_response <- readline(prompt="If you prefer to use linear regression, enter 'y': ")
+  if(identical(linear_response, 'y')){
+    preferLinear <- TRUE
+  } else{
+    preferLinear <- FALSE
+  }
+
+
+  indt <- new(IndTest, ds, alpha, preferLinear)
   pcs <- new(PcStable, indt)
 
   .jcall(pcs, "V", "setInitialGraph", graph)
