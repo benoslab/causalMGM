@@ -1,10 +1,39 @@
 # Returns the directed graph
 mgm.pc_stable <- function(ds, graph){
 
+  alpha <<- 0.1
+
+  # Check alpha value is valid
+  check_alpha <- function(alpha){
+    if(alpha < 0 || alpha > 1){
+      print("Error: alpha values must be between 0 and 1")
+      return(FALSE)
+    } else {
+      return(TRUE)
+    }
+  }
+
+  get_alpha <- function(){
+    prompt <- paste("Please enter the alpha value you would like to use: ")
+    alpha <<- as.numeric(readline(prompt))
+    if(!check_alpha(alpha)){
+      get_alpha()
+    } else {
+      return(alpha)
+    }
+  }
+
+  check_alpha_change <- function(response){
+    if(identical(response, "y")){
+      get_alpha()
+    }
+  }
+
   IndTest <- J("edu/pitt/csb/mgm/IndTestMultinomialAJ")
   PcStable <- J("edu/cmu/tetrad/search/PcStable")
 
-  alpha <- 0.05
+  response <- readline(prompt="The default alpha value is 0.1. To change this alpha value, enter 'y': ")
+  check_alpha_change(response)
 
   indt <- new(IndTest, ds, alpha)
   pcs <- new(PcStable, indt)

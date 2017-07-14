@@ -1,5 +1,5 @@
 # Prompt user for dataset file and create global DataSet object
-loadData <- function(data_table, file=FALSE){
+loadData <- function(data_table = NULL, file=FALSE){
   # Create MixedUtils object
   MixedUtils <- J("edu/pitt/csb/mgm/MixedUtils")
   mu <- new(MixedUtils)

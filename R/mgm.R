@@ -1,6 +1,23 @@
 # Returns the undirected graph
 mgm <- function(ds) {
 
+  cc <<- 0.3
+  cd <<- 0.3
+  dd <<- 0.3
+
+
+  check_value_change <- function(response){
+    if(identical(response, "y")){
+      change_lambdas()
+    }
+  }
+
+  change_lambdas <- function(){
+    # Prompt user for lambda values
+    cc <<- get_lambda("continuous-continuous")
+    cd <<- get_lambda("continuous-discrete")
+    dd <<- get_lambda("discrete-discrete")
+  }
 
   # Prompt user for lambda value
   get_lambda <- function(lambda_type){
@@ -23,10 +40,9 @@ mgm <- function(ds) {
     }
   }
 
-  # Prompt user for lambda values
-  cc <- get_lambda("continuous-continuous")
-  cd <- get_lambda("continuous-discrete")
-  dd <- get_lambda("discrete-discrete")
+  writeLines("These are the default lambda values:\n continuous-continuous: 0.3\n continuous-discrete: 0.3\n discrete-discrete: 0.3")
+  response <- readline(promp="To change the values, enter 'y': ")
+  check_value_change(response)
 
   # Create Java array of lambda values
   lb <- c(cc, cd, dd)
