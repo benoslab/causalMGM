@@ -12,7 +12,7 @@ Note: If Java 1.6 is installed as well as 1.7 or 1.8, RStudio will default to Ja
 ```
 sudo R CMD javareconf
 ```
-- Load libjvm.dylib in R
+- Load libjvm.dylib in R. You need to have installed the Java Development Kit in order to do this.
 ```R
 dyn.load('/path/to/libjvm.dylib')
 ```
