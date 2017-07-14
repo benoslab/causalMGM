@@ -7,6 +7,7 @@ Java >= 1.7.0,
 [rJava](https://cran.r-project.org/web/packages/rJava/index.html)
 
 ## Installation for Mac OS X Users
+Note: If Java 1.6 is installed as well as 1.7 or 1.8, RStudio will default to Java 1.6 and causalMGM will not run. Please remove Java 1.6 before install causalMGM.
 - In the terminal, configure Java and R
 ```
 sudo R CMD javareconf
@@ -49,3 +50,6 @@ Please enter the discrete-discrete lambda value: 0.3
 > mgm.pc_stable(dataset, graph) # Create the directed graph
 ```
 
+
+## Contact
+Please contact <mgmquery@pitt.edu> with any questions.
