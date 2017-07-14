@@ -7,10 +7,14 @@ Loads dataset into a DataSet object
 Prompts user for file containing dataset and creates a DataSet object
 }
 \usage{
-loadData()
+loadData(data_table, file=FALSE)
+}
+\arguments{
+  \item{data_table}{One-way R table}
+  \item{file}{Boolean value, set to true to use dataset from file, false to use data_table }
 }
 \value{
-\item{ds}{DataSet object}
+  \item{ds}{DataSet object}
 }
 \author{
 Neha Abraham, Panagiotis Benos
@@ -21,5 +25,6 @@ File containing dataset must be a .txt tab-delimited file. The first row must co
 }
 \examples{
 mgm_init()
-ds <- loadData()
+ds <- loadData(file=TRUE) # to load dataset from file
+ds <- loadData(data_table) # to load dataset from table
 }
