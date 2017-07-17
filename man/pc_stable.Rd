@@ -20,6 +20,7 @@ mgm.pc_stable(ds, graph)
   \item{pcs_graph}{Directed graph}
 }
 \references{
+Andrew J Sedgewick, Joseph D. Ramsey, Peter Spirtes, Clark Glymour, Panayiotis V. Benos, "Mixed Graphical Models for Causal Analysis of Multi-modal Variables", 2017, arXiv:1704.02621
 https://arxiv.org/abs/1704.02621
 }
 \author{

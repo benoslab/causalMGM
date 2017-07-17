@@ -55,5 +55,10 @@ Please enter the discrete-discrete lambda value: 0.3
 > mgm.pc_stable(dataset, undgraph) # learn the directed graph using 'undgraph' as skeleton to guide local searches.
 ```
 
+## References
+[Andrew J Sedgewick, Joseph D. Ramsey, Peter Spirtes, Clark Glymour, Panayiotis V. Benos, "Mixed Graphical Models for Causal Analysis of Multi-modal Variables", 2017, arXiv:1704.02621](https://arxiv.org/abs/1704.02621)
+
+[AJ Sedgewick, I Shi, RM Donovan, PV Benos, "Learning mixed graphical models with separate sparsity parameters and stability-based model selection", 2016, BM Bioinformatics 17(Suppl 5):S175 DOI: 10.1186/s12859-016-1039-0](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-016-1039-0)
+
 ## Contact
 The causalMGM R package is developed by Neha Abraham and the [Benos lab](http://www.csb.pitt.edu/Faculty/benos/). Please contact <mgmquery@pitt.edu> with any questions.
