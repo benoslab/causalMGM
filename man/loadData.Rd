@@ -24,7 +24,8 @@ Should be called after mgm_init()
 File containing dataset must be a .txt tab-delimited file. The first row must contain the names of the variables and the remaining rows must contain the values of the variables.
 }
 \examples{
+library(rJava)
 mgm_init()
-ds <- loadData(file=TRUE) # to load dataset from file
-ds <- loadData(data_table) # to load dataset from table
+\dontrun{ds <- loadData(file=TRUE) # to load dataset from file}
+\dontrun{ds <- loadData(data_table) # to load dataset from table}
 }

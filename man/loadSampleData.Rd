@@ -16,5 +16,7 @@ loadSampleData()
 Neha Abraham
 }
 \examples{
+library(rJava)
+mgm_init()
 ds <- loadSampleData()
 }

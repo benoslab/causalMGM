@@ -1,7 +1,7 @@
 # Returns the directed graph
 mgm.pc_stable <- function(ds, graph){
 
-  alpha <<- 0.1
+  alpha <- NULL
 
   # Check alpha value is valid
   check_alpha <- function(alpha){
@@ -32,6 +32,8 @@ mgm.pc_stable <- function(ds, graph){
   IndTest <- J("edu/pitt/csb/mgm/IndTestMultinomialAJ")
   PcStable <- J("edu/cmu/tetrad/search/PcStable")
 
+  alpha <<- 0.1
+
   response <- readline(prompt="The default alpha value is 0.1. To change this alpha value, enter 'y': ")
   check_alpha_change(response)
 
@@ -53,6 +55,9 @@ mgm.pc_stable <- function(ds, graph){
   pcs_graph <- .jcall(pcs, "Ledu/cmu/tetrad/graph/Graph;", "search")
 
   pcs_output <- .jcall(pcs_graph, "Ljava/lang/String;", "toString")
+
+  # Generate random number
+  rn <- sample(100000:999999, 1)
 
   output_filename <- paste("causalMGM_directedgraph_",rn,".txt", sep="")
 

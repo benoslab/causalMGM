@@ -25,7 +25,8 @@ https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-016-1039-0
 AJ Sedgewick, Neha Abraham, Panagiotis Benos
 }
 \examples{
+library(rJava)
 mgm_init()
-ds <- loadData()
-mgm_graph <- mgm(ds)
+\dontrun{ds <- loadData()}
+\dontrun{mgm_graph <- mgm(ds)}
 }

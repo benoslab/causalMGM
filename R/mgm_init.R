@@ -1,11 +1,10 @@
 # Load rJava and jars, initialize JVM
 mgm_init <- function(){
 
-  # Load rJava library
-  library(rJava)
   # Initalize JVM
   .jinit()
 
+  os <- NULL
   os <<- .Platform$OS.type
 
   if(identical("windows", .Platform$OS.type)){

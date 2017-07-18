@@ -1,2 +1,3 @@
 exportPattern("^[[:alpha:]]+")
 import(rJava)
+importFrom("utils", "write.table")

@@ -1,10 +1,9 @@
 # Returns the undirected graph
 mgm <- function(ds) {
 
-  cc <<- 0.3
-  cd <<- 0.3
-  dd <<- 0.3
-
+  cc <- NULL
+  cd <- NULL
+  dd <- NULL
 
   check_value_change <- function(response){
     if(identical(response, "y")){
@@ -40,8 +39,13 @@ mgm <- function(ds) {
     }
   }
 
+
+  cc <<- 0.3
+  cd <<- 0.3
+  dd <<- 0.3
+
   writeLines("These are the default lambda values:\n continuous-continuous: 0.3\n continuous-discrete: 0.3\n discrete-discrete: 0.3")
-  response <- readline(promp="To change the values, enter 'y': ")
+  response <- readline(prompt="To change the values, enter 'y': ")
   check_value_change(response)
 
   # Create Java array of lambda values
@@ -57,7 +61,7 @@ mgm <- function(ds) {
   mgm_output <- .jcall(mgm_graph, "Ljava/lang/String;", "toString")
 
   # Generate random number
-  rn <<- sample(100000:999999, 1)
+  rn <- sample(100000:999999, 1)
 
   output_filename <- paste("causalMGM_undirectedgraph_",rn,".txt", sep="")
 
