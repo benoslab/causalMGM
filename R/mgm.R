@@ -61,7 +61,7 @@ mgm <- function(ds) {
   mgm_output <- .jcall(mgm_graph, "Ljava/lang/String;", "toString")
 
   # Generate random number
-  rn <- sample(100000:999999, 1)
+  rn <- randnum()
 
   output_filename <- paste("causalMGM_undirectedgraph_",rn,".txt", sep="")
 
