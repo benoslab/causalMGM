@@ -20,8 +20,9 @@ get_new_alpha <- function(alpha){
 
 check_alpha_change <- function(response, alpha){
   if(identical(response, "y")){
-    get_new_alpha(alpha)
+    alpha <- get_new_alpha(alpha)
   }
+  return(alpha)
 }
 
 get_alpha <- function(alpha){
@@ -29,7 +30,7 @@ get_alpha <- function(alpha){
   check_alpha_change(response, alpha)
 }
 
-check_preferLinear <- function(){
+check_preferLinear <- function(preferLinear){
   linear_response <- readline(prompt="If you prefer to use linear regression, enter 'y': ")
   if(identical(linear_response, 'y')){
     preferLinear <- TRUE
@@ -42,7 +43,8 @@ check_preferLinear <- function(){
 get_directed_graph <- function(ds, graph, PC){
   alpha <- 0.1
   alpha <- get_alpha(alpha)
-  preferLinear <- check_preferLinear()
+  preferLinear <- TRUE
+  preferLinear <- check_preferLinear(preferLinear)
 
 
   IndTest <- J("edu/pitt/csb/mgm/IndTestMultinomialAJ")
@@ -64,4 +66,6 @@ get_directed_graph <- function(ds, graph, PC){
   outputfile_path <- paste(getwd(), output_filename, sep="/")
   end_message <- paste("The output has been saved to", outputfile_path)
   print(end_message)
+
+  return(pc_graph)
 }

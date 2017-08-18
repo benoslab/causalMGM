@@ -1,21 +1,21 @@
 # Returns the undirected graph
 mgm <- function(ds) {
 
-  cc <- NULL
-  cd <- NULL
-  dd <- NULL
-
-  check_value_change <- function(response){
+  check_value_change <- function(response, lambda_vals){
     if(identical(response, "y")){
-      change_lambdas()
+      change_lambdas(lambda_vals)
     }
+    return(lambda_vals)
   }
 
-  change_lambdas <- function(){
+  change_lambdas <- function(lambda_vals){
     # Prompt user for lambda values
-    cc <<- get_lambda("continuous-continuous")
-    cd <<- get_lambda("continuous-discrete")
-    dd <<- get_lambda("discrete-discrete")
+    cc <- get_lambda("continuous-continuous")
+    cd <- get_lambda("continuous-discrete")
+    dd <- get_lambda("discrete-discrete")
+
+    lambda_vals <- c(cc, cd, dd)
+    return(lambda_vals)
   }
 
   # Prompt user for lambda value
@@ -40,17 +40,14 @@ mgm <- function(ds) {
   }
 
 
-  cc <<- 0.3
-  cd <<- 0.3
-  dd <<- 0.3
+  lambda_vals <- c(0.3,0.3,0.3)
 
   writeLines("These are the default lambda values:\n continuous-continuous: 0.3\n continuous-discrete: 0.3\n discrete-discrete: 0.3")
   response <- readline(prompt="To change the values, enter 'y': ")
-  check_value_change(response)
+  check_value_change(response, lambda_vals)
 
   # Create Java array of lambda values
-  lb <- c(cc, cd, dd)
-  lambda <- .jarray(lb)
+  lambda <- .jarray(lambda_vals)
 
   # Create and initialize MGM object
   MGM <- J("edu/pitt/csb/mgm/MGM")
