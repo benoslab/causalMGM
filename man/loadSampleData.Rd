@@ -18,5 +18,5 @@ Neha Abraham
 \examples{
 library(rJava)
 mgm_init()
-ds <- loadSampleData()
+\dontrun{ds <- loadSampleData()}
 }

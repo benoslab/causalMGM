@@ -39,7 +39,7 @@ e.g.:
 - Install causalMGM from github:
 ```R
 > library(devtools)
-> install_github("nehaabraham/causalMGM")
+> install_github("benoslab/causalMGM")
 > library(causalMGM)
 ```
 

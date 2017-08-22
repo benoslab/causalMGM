@@ -1,4 +1,6 @@
 exportPattern("^[[:alpha:]]+")
 import(rJava)
+import(RCurl)
 importFrom("utils", "write.table")
 importFrom("graphics", "legend", "matplot")
+importFrom("utils", "download.file")
