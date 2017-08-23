@@ -10,14 +10,17 @@ mgm_init <- function(){
 
   if(identical("windows", .Platform$OS.type)){
     jarPath <- paste(.libPaths()[2], "\\causalMGM\\tetradLite.jar", sep="")
+    #jarPath <- paste(getwd(), "\\tetradLite.jar", sep="")
+
   } else{
     jarPath <- paste(.libPaths()[2], "/causalMGM/tetradLite.jar", sep="")
+    #jarPath <- paste(getwd(), "/tetradLite.jar", sep="")
   }
 
   if(!file.exists(jarPath)){
     f = CFILE(jarPath, mode="wb")
-    file_url <- 'https://github.com/benoslab/tetradLite/tree/master/out/artifacts/tetradLite_jar/tetradLite.jar?raw=true'
-    curlPerform(url, writedata = f@ref)
+    file_url <- 'https://raw.githubusercontent.com/benoslab/causalMGM/master/inst/java/tetradLite.jar'
+    curlPerform(url=file_url, writedata = f@ref)
     close(f)
   }
 
