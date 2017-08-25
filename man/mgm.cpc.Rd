@@ -20,16 +20,13 @@ mgm.cpc(ds, graph)
 \value{
   Returns the directed graph
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{
   Neha Abraham, Vineet Raghu, Panagiotis Benos
 }
 
 \examples{
-mgm_init()
-ds <- loadSampleData()
-graph <- mgm(ds)
-mgm.cpc(ds, graph)
+\dontrun{mgm_init()}
+\dontrun{ds <- loadSampleData()}
+\dontrun{graph <- mgm(ds)}
+\dontrun{mgm.cpc(ds, graph)}
 }

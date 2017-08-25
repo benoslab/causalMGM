@@ -1,46 +1,48 @@
-# Check alpha value is valid
-check_alpha <- function(alpha){
-  if(alpha < 0 || alpha > 1){
-    print("Error: alpha values must be between 0 and 1")
-    return(FALSE)
-  } else {
-    return(TRUE)
-  }
-}
 
-get_new_alpha <- function(alpha){
-  prompt <- paste("Please enter the alpha value you would like to use: ")
-  alpha <- as.numeric(readline(prompt))
-  if(!check_alpha(alpha)){
-    get_alpha(alpha)
-  } else {
-    return(alpha)
-  }
-}
-
-check_alpha_change <- function(response, alpha){
-  if(identical(response, "y")){
-    alpha <- get_new_alpha(alpha)
-  }
-  return(alpha)
-}
-
-get_alpha <- function(alpha){
-  response <- readline(prompt="The default alpha value is 0.1. To change this alpha value, enter 'y': ")
-  check_alpha_change(response, alpha)
-}
-
-check_preferLinear <- function(preferLinear){
-  linear_response <- readline(prompt="If you prefer to use linear regression, enter 'y': ")
-  if(identical(linear_response, 'y')){
-    preferLinear <- TRUE
-  } else{
-    preferLinear <- FALSE
-  }
-  return(preferLinear)
-}
 
 get_directed_graph <- function(ds, graph, PC){
+
+  # Check alpha value is valid
+  check_alpha <- function(alpha){
+    if(alpha < 0 || alpha > 1){
+      print("Error: alpha values must be between 0 and 1")
+      return(FALSE)
+    } else {
+      return(TRUE)
+    }
+  }
+
+  get_new_alpha <- function(alpha){
+    prompt <- paste("Please enter the alpha value you would like to use: ")
+    alpha <- as.numeric(readline(prompt))
+    if(!check_alpha(alpha)){
+      get_alpha(alpha)
+    } else {
+      return(alpha)
+    }
+  }
+
+  check_alpha_change <- function(response, alpha){
+    if(identical(response, "y")){
+      alpha <- get_new_alpha(alpha)
+    }
+    return(alpha)
+  }
+
+  get_alpha <- function(alpha){
+    response <- readline(prompt="The default alpha value is 0.1. To change this alpha value, enter 'y': ")
+    check_alpha_change(response, alpha)
+  }
+
+  check_preferLinear <- function(preferLinear){
+    linear_response <- readline(prompt="If you prefer to use linear regression, enter 'y': ")
+    if(identical(linear_response, 'y')){
+      preferLinear <- TRUE
+    } else{
+      preferLinear <- FALSE
+    }
+    return(preferLinear)
+  }
   alpha <- 0.1
   alpha <- get_alpha(alpha)
   preferLinear <- TRUE

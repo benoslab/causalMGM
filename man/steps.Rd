@@ -1,36 +1,18 @@
 \name{steps}
 \alias{steps}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
   STEPS functions
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Displays of a graph of lambda values against stability to allow user to choose optimum lambda value
 }
 \usage{
 steps(dataset)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{dataset}{
-%%     ~~Describe \code{dataset} here~~
-}
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
+  \item{dataset}{Dataset Object}
 }
 \author{
-%%  ~~who you are~~
+AJ Sedgewick, Vineet Raghu, Neha Abraham, Panagiotis Benos
 }
-\examples{
-}
+

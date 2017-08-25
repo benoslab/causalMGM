@@ -28,8 +28,8 @@ AJ Sedgewick, Neha Abraham, Panagiotis Benos
 }
 \examples{
 library(rJava)
-mgm_init()
-ds <- loadSampleData()
+\dontrun{mgm_init()}
+\dontrun{ds <- loadSampleData()}
 \dontrun{graph <- mgm(ds)}
 \dontrun{mgm.pc_stable(ds, graph)}
 }

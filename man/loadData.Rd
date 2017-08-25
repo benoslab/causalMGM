@@ -25,7 +25,7 @@ File containing dataset must be a .txt tab-delimited file. The first row must co
 }
 \examples{
 library(rJava)
-mgm_init()
+\dontrun{mgm_init()}
 \dontrun{ds <- loadData(file=TRUE) # to load dataset from file}
 \dontrun{ds <- loadData(data_table) # to load dataset from table}
 }
