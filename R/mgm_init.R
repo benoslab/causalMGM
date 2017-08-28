@@ -9,9 +9,9 @@ mgm_init <- function(){
 
 
   if(identical("windows", .Platform$OS.type)){
-    jarPath <- paste(.libPaths()[2], "\\causalMGM\\tetradLite.jar", sep="")
+    jarPath <- paste(tail(.libPaths(), n=1), "\\causalMGM\\tetradLite.jar", sep="")
   } else{
-    jarPath <- paste(.libPaths()[2], "/causalMGM/tetradLite.jar", sep="")
+    jarPath <- paste(tail(.libPaths(), n=1), "/causalMGM/tetradLite.jar", sep="")
   }
 
  if(!file.exists(jarPath)){
