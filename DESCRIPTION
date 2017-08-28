@@ -4,7 +4,7 @@ Title: Causal Learning of Mixed Graphical Models
 Version: 0.1.0
 Author: Andrew J Sedgewick, Neha Abraham <neha.abraham@pitt.edu>, Vineet Raghu <vineetraghu@gmail.com>, Panagiotis Benos <benos@pitt.edu>
 Maintainer: Neha Abraham <mgmquery@pitt.edu>
-Description: This is an R package that allow users to learn undirected and directed (causal) graphs over mixed data types (i.e., continuous and discrete variables). To learn a directed graph over mixed data, it first calculates the undirected graph (Sedgewick et al, 2016) and then it uses local search strategies to prune-and-orient this graph (Sedgewick et al, 2017).
+Description: Allows users to learn undirected and directed (causal) graphs over mixed data types (i.e., continuous and discrete variables). To learn a directed graph over mixed data, it first calculates the undirected graph (Sedgewick et al, 2016) and then it uses local search strategies to prune-and-orient this graph (Sedgewick et al, 2017).
 License: GPL-2
 Encoding: UTF-8
 LazyData: true

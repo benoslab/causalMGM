@@ -9,16 +9,17 @@ mgm_init <- function(){
 
 
   if(identical("windows", .Platform$OS.type)){
-    jarPath <- paste(.libPaths()[2], "\\causalMGM\\java\\tetradLite.jar", sep="")
+    jarPath <- paste(.libPaths()[2], "\\causalMGM\\tetradLite.jar", sep="")
   } else{
-    jarPath <- paste(.libPaths()[2], "/causalMGM/java/tetradLite.jar", sep="")
+    jarPath <- paste(.libPaths()[2], "/causalMGM/tetradLite.jar", sep="")
   }
 
  if(!file.exists(jarPath)){
-    f = CFILE(jarPath, mode="wb")
-    file_url <- 'https://raw.githubusercontent.com/benoslab/causalMGM/master/inst/java/tetradLite.jar'
-    curlPerform(url=file_url, writedata = f@ref)
-    close(f)
+    #f = CFILE(jarPath, mode="wb")
+    file_url <- 'https://cdn.rawgit.com/benoslab/tetradLite/7c16abbd/out/artifacts/tetradLite_jar/tetradLite.jar'
+    #curlPerform(url=file_url, writedata = f@ref)
+    #close(f)
+    download.file(url=file_url, mode='wb', destfile = jarPath)
   }
 
   # Add tetrad jar
