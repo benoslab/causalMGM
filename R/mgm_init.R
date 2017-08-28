@@ -15,10 +15,7 @@ mgm_init <- function(){
   }
 
  if(!file.exists(jarPath)){
-    #f = CFILE(jarPath, mode="wb")
     file_url <- 'https://cdn.rawgit.com/benoslab/tetradLite/7c16abbd/out/artifacts/tetradLite_jar/tetradLite.jar'
-    #curlPerform(url=file_url, writedata = f@ref)
-    #close(f)
     download.file(url=file_url, mode='wb', destfile = jarPath)
   }
 
