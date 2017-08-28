@@ -26,7 +26,7 @@ AJ Sedgewick, Neha Abraham, Panagiotis Benos
 }
 \examples{
 library(rJava)
-\dontrun{mgm_init()}
-\dontrun{ds <- loadData()}
-\dontrun{mgm_graph <- mgm(ds)}
+mgm_init()
+ds <- loadSampleData()
+\donttest{mgm_graph <- mgm(ds)}
 }

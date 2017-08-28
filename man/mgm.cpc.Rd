@@ -25,8 +25,9 @@ mgm.cpc(ds, graph)
 }
 
 \examples{
-\dontrun{mgm_init()}
-\dontrun{ds <- loadSampleData()}
-\dontrun{graph <- mgm(ds)}
-\dontrun{mgm.cpc(ds, graph)}
+library(causalMGM)
+mgm_init()
+ds <- loadSampleData()
+\donttest{graph <- mgm(ds)}
+\donttest{mgm.cpc(ds, graph)}
 }

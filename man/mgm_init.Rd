@@ -18,5 +18,5 @@ Must be the first function called after loading the causalMGM library
 }
 \examples{
 library(rJava)
-\dontrun{mgm_init()}
+mgm_init()
 }

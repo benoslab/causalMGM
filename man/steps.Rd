@@ -15,4 +15,10 @@ steps(dataset)
 \author{
 AJ Sedgewick, Vineet Raghu, Neha Abraham, Panagiotis Benos
 }
+\examples{
+library(rJava)
+mgm_init()
+ds <- loadSampleData()
+\donttest{steps(ds)}
+}
 

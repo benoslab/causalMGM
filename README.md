@@ -2,7 +2,7 @@
 causalMGM is an R package that allow users to learn undirected and directed (causal) graphs over mixed data types (i.e., continuous and discrete variables). To learn a directed graph over mixed data, it first calculates the undirected graph (Sedgewick *et al*, 2016) and then it uses local search strategies to prune-and-orient this graph (Sedgewick *et al*, 2017).
 
 ## R Library Requirement
-R >= 3.4.0,
+R >= 3.2.0,
 Java >= 1.7.0,
 [rJava](https://CRAN.R-project.org/package=rJava)
 
