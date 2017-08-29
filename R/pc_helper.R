@@ -1,5 +1,3 @@
-
-
 get_directed_graph <- function(ds, graph, PC){
 
   # Check alpha value is valid
@@ -14,7 +12,7 @@ get_directed_graph <- function(ds, graph, PC){
 
   get_new_alpha <- function(alpha){
     prompt <- paste("Please enter the alpha value you would like to use: ")
-    alpha <- as.numeric(readline(prompt))
+    alpha <- readline(prompt)
     if(!check_alpha(alpha)){
       get_alpha(alpha)
     } else {
@@ -30,8 +28,9 @@ get_directed_graph <- function(ds, graph, PC){
   }
 
   get_alpha <- function(alpha){
-    response <- readline(prompt="The default alpha value is 0.1. To change this alpha value, enter 'y': ")
-    check_alpha_change(response, alpha)
+    response <- readline(prompt="The default alpha value is 0.05. To change this alpha value, enter 'y': ")
+    alpha <- check_alpha_change(response, alpha)
+    return(alpha)
   }
 
   check_preferLinear <- function(preferLinear){
@@ -43,8 +42,8 @@ get_directed_graph <- function(ds, graph, PC){
     }
     return(preferLinear)
   }
-  alpha <- 0.1
-  alpha <- get_alpha(alpha)
+  alpha <- 0.05
+  alpha <- as.numeric(get_alpha(alpha))
   preferLinear <- TRUE
   preferLinear <- check_preferLinear(preferLinear)
 
@@ -65,7 +64,7 @@ get_directed_graph <- function(ds, graph, PC){
   # Write string to output file
   lapply(strsplit(pc_output[1], "\n"), write, output_filename)
 
-  outputfile_path <- paste(getwd(), output_filename, sep="/")
+  outputfile_path <- paste(getwd(), output_filename, sep=.Platform$file.sep)
   end_message <- paste("The output has been saved to", outputfile_path)
   print(end_message)
 

@@ -1,10 +1,10 @@
 \name{steps}
 \alias{steps}
 \title{
-  STEPS functions
+  STEPS (beta)
 }
 \description{
-Displays of a graph of lambda values against stability to allow user to choose optimum lambda value
+Displays of a graph of lambda values against stability to allow user to choose optimum lambda value.
 }
 \usage{
 steps(dataset)

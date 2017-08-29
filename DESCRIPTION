@@ -8,5 +8,5 @@ Description: Allows users to learn undirected and directed (causal) graphs over 
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
-Depends: R (>= 3.2.0), rJava, RCurl
+Depends: R (>= 3.2.0), rJava
 SystemRequirements: Java (>= 1.7), JRI

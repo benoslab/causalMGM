@@ -6,7 +6,7 @@ loadSampleData <- function(){
 
   # Prompt user for dataset
   fileName <- "Lung-tetrad_hv-14vars.txt"
-  fileDir <- paste(.libPaths()[1], "/causalMGM/txt", sep="")
+  fileDir <- paste(.libPaths()[1], "causalMGM", "txt", sep=.Platform$file.sep)
 
   # Create DataSet object from file
   ds <- .jcall(mu, "Ledu/cmu/tetrad/data/DataSet;", "loadDataSet", fileDir, fileName)
