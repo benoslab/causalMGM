@@ -55,13 +55,6 @@ Please enter the discrete-discrete lambda value: 0.3
 > mgm.pc_stable(dataset, undgraph) # learn the directed graph using 'undgraph' as skeleton to guide local searches.
 ```
 
-## STEPS
-Steps is currently a beta version of the package. Please direct any comments or questions to mgmquery@pitt.edu
-```R
-> dataset <- loadSampleData()
-> steps(dataset)
-```
-
 ## References
 [Andrew J Sedgewick, Joseph D. Ramsey, Peter Spirtes, Clark Glymour, Panayiotis V. Benos, "Mixed Graphical Models for Causal Analysis of Multi-modal Variables", 2017, arXiv:1704.02621](https://arxiv.org/abs/1704.02621)
 
