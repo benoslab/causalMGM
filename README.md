@@ -36,10 +36,10 @@ e.g.:
 ```R
 > install.packages("rJava")
 ```
-- Install causalMGM from github:
+- Install causalMGM:
 ```R
 > library(devtools)
-> install_github("benoslab/causalMGM")
+> install.packages("causalMGM")
 > library(causalMGM)
 ```
 
